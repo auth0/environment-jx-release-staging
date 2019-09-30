@@ -1,0 +1,86 @@
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-m7wtq[0m
+{"level":"warn","ts":1569865043.3620634,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569865043.363101,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-8d7q9[0m
+{"level":"warn","ts":1569865044.2952492,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569865044.3012872,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-auth0-environment-jx-release-st-zblhv[0m
+{"level":"warn","ts":1569865071.2709985,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569865071.4380739,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/auth0/environment-**-release-staging.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:79528f26133f5f106bb855723f2fc374bbf8daa9","time":"2019-09-30T17:37:51Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-09-30T17:37:51Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+{"level":"info","msg":"Generated Git credentials file /builder/home/git/credentials","time":"2019-09-30T17:37:52Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+{"level":"info","msg":"Modified file /workspace/source/env/Chart.yaml to set the chart to version 1","time":"2019-09-30T17:37:52Z"}
+{"level":"info","msg":"Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/**-helm-apply-154458096/env\n","time":"2019-09-30T17:37:52Z"}
+{"level":"info","msg":"Applying helm chart at /tmp/**-helm-apply-154458096/env as release name ** to namespace **-staging","time":"2019-09-30T17:37:52Z"}
+{"level":"info","msg":"verifying the helm requirements versions in dir: . using version stream URL:  and git ref: \n","time":"2019-09-30T17:37:52Z"}
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-09-30T17:37:52Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-09-30T17:37:52Z"}
+{"level":"info","msg":"Ignoring templates/.gitignore","time":"2019-09-30T17:37:53Z"}
+{"level":"info","msg":"Wrote chart values.yaml /tmp/**-helm-apply-154458096/env/values.yaml generated from directory tree","time":"2019-09-30T17:37:53Z"}
+{"level":"info","msg":"generated helm /tmp/**-helm-apply-154458096/env/values.yaml","time":"2019-09-30T17:37:53Z"}
+{"level":"info","msg":"\nPipelineSecrets: {}\ncleanup:\n  Annotations:\n    helm.sh/hook: pre-delete\n    helm.sh/hook-delete-policy: hook-succeeded\n  Args:\n  - --cleanup\ncontrollerbuild:\n  enabled: true\ncontrollerworkflow:\n  enabled: false\ndockerRegistry: 875966900912.dkr.ecr.us-west-2.amazonaws.com\nexpose:\n  Annotations:\n    helm.sh/hook: post-install,post-upgrade\n    helm.sh/hook-delete-policy: hook-succeeded\n  Args:\n  - --v\n  - 4\n  config:\n    domain: **.release.forge.auth0.net\n    exposer: Ingress\n    http: \"true\"\njenkins:\n  Servers:\n    Global:\n      EnvVars:\n        TILLER_NAMESPACE: kube-system\n  enabled: false\nprow: {}\n\n","time":"2019-09-30T17:37:53Z"}
+{"level":"info","msg":"Using values files: /tmp/**-helm-apply-154458096/env/values.yaml","time":"2019-09-30T17:37:53Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-09-30T17:37:53Z"}
+{"level":"info","msg":"Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io","time":"2019-09-30T17:37:55Z"}
+{"level":"info","msg":"Successfully added Helm repository storage.googleapis.com.","time":"2019-09-30T17:37:56Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080","time":"2019-09-30T17:37:56Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.","time":"2019-09-30T17:37:56Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-09-30T17:37:56Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io","time":"2019-09-30T17:37:56Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.","time":"2019-09-30T17:37:57Z"}
+{"level":"info","msg":"Applying Apps chart overrides","time":"2019-09-30T17:38:08Z"}
+{"level":"info","msg":"Applying chart overrides","time":"2019-09-30T17:38:08Z"}
+{"level":"info","msg":"","time":"2019-09-30T17:38:08Z"}
+{"level":"info","msg":"","time":"2019-09-30T17:38:08Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-qlxnm[0m
+{"level":"warn","ts":1569865030.5082402,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569865030.509087,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-rrnh7[0m
+{"level":"warn","ts":1569865030.847373,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1569865030.8489804,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-auth0-environment-jx-relea-xd7tl[0m
+{"level":"warn","ts":1569865035.8782928,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1569865036.030023,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/auth0/environment-**-release-staging.git @ 79528f26133f5f106bb855723f2fc374bbf8daa9 in path /workspace/source"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:79528f26133f5f106bb855723f2fc374bbf8daa9","time":"2019-09-30T17:37:16Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-09-30T17:37:16Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-09-30T17:37:16Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-09-30T17:37:16Z"}
+{"level":"info","msg":"selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-09-30T17:37:17Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-effective.yml","time":"2019-09-30T17:37:18Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+{"level":"info","msg":"running command: ** step next-version --use-git-tag-only --tag","time":"2019-09-30T17:37:19Z"}
+{"level":"info","msg":"created new version: 0.0.1 and written to file: ./VERSION","time":"2019-09-30T17:37:19Z"}
+{"level":"info","msg":"Tag v0.0.1 created and pushed to remote origin","time":"2019-09-30T17:37:21Z"}
+{"level":"info","msg":"","time":"2019-09-30T17:37:21Z"}
+{"level":"info","msg":"PipelineActivity for auth0-environment-**-release-staging-master-1","time":"2019-09-30T17:37:21Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-09-30T17:37:21Z"}
+{"level":"info","msg":"upserted PipelineResource auth0-environment-**-release-st for the git repository https://github.com/auth0/environment-**-release-staging.git","time":"2019-09-30T17:37:21Z"}
+{"level":"info","msg":"upserted Task auth0-environment-**-release-st-from-build-pack-1","time":"2019-09-30T17:37:21Z"}
+{"level":"info","msg":"upserted Pipeline auth0-environment-**-release-st-1","time":"2019-09-30T17:37:21Z"}
+{"level":"info","msg":"created PipelineRun auth0-environment-**-release-st-1","time":"2019-09-30T17:37:22Z"}
+{"level":"info","msg":"created PipelineStructure auth0-environment-**-release-st-1","time":"2019-09-30T17:37:22Z"}
