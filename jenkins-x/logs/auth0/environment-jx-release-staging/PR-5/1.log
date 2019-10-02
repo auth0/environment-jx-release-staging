@@ -1,0 +1,33 @@
+
+Showing logs for build [32mauth0-environment-jx-release-st-fbvxb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-m8t9x[0m
+{"level":"warn","ts":1570041565.6039863,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570041565.6043322,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mauth0-environment-jx-release-st-fbvxb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-d7tl7[0m
+{"level":"warn","ts":1570041566.4932964,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1570041566.4961457,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mauth0-environment-jx-release-st-fbvxb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mauth0-environment-jx-release-st-fbvxb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-auth0-environment-jx-release-st-g5mvn[0m
+{"level":"warn","ts":1570041571.5465858,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570041571.7006402,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/auth0/environment-**-release-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-fbvxb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:79528f26133f5f106bb855723f2fc374bbf8daa9,5:3b0258dab14c2ec6742ed825fde5348647542b5d","time":"2019-10-02T18:39:31Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 3b0258dab14c2ec6742ed825fde5348647542b5d: 79528f26133f5f106bb855723f2fc374bbf8daa9: in ","time":"2019-10-02T18:39:32Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-10-02T18:39:32Z"}
+{"level":"debug","msg":"ran git reset --hard 79528f26133f5f106bb855723f2fc374bbf8daa9 in ","time":"2019-10-02T18:39:32Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-10-02T18:39:32Z"}
+{"level":"debug","msg":"ran git merge 3b0258dab14c2ec6742ed825fde5348647542b5d in ","time":"2019-10-02T18:39:32Z"}
+{"level":"info","msg":"Merged SHA 3b0258dab14c2ec6742ed825fde5348647542b5d with commit message 'The command `** delete application` was run by jeff and it generated this Pull Request' into base branch master","time":"2019-10-02T18:39:32Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-fbvxb-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-10-02T18:39:33Z"}
+{"level":"info","msg":"Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io","time":"2019-10-02T18:39:34Z"}
+{"level":"info","msg":"Successfully added Helm repository storage.googleapis.com.","time":"2019-10-02T18:39:35Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080","time":"2019-10-02T18:39:35Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.","time":"2019-10-02T18:39:35Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-10-02T18:39:35Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io","time":"2019-10-02T18:39:35Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.","time":"2019-10-02T18:39:36Z"}
