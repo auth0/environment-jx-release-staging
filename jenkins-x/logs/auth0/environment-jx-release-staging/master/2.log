@@ -1,0 +1,46 @@
+
+Showing logs for build [32mauth0-environment-jx-release-st-d27jz-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-8qn7x[0m
+{"level":"warn","ts":1570041607.19988,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570041607.2002466,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mauth0-environment-jx-release-st-d27jz-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-djpmz[0m
+{"level":"warn","ts":1570041608.1852353,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1570041608.1875577,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mauth0-environment-jx-release-st-d27jz-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mauth0-environment-jx-release-st-d27jz-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-auth0-environment-jx-release-st-5s9rc[0m
+{"level":"warn","ts":1570041613.1940207,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570041613.804067,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/auth0/environment-**-release-staging.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-d27jz-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:7f3c1cb7c5c65d3f1cc0db338eb77ba471781bb6","time":"2019-10-02T18:40:14Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-10-02T18:40:14Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-d27jz-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+{"level":"info","msg":"Generated Git credentials file /builder/home/git/credentials","time":"2019-10-02T18:40:14Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-d27jz-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+{"level":"info","msg":"Modified file /workspace/source/env/Chart.yaml to set the chart to version 2","time":"2019-10-02T18:40:14Z"}
+{"level":"info","msg":"Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/**-helm-apply-279446173/env\n","time":"2019-10-02T18:40:14Z"}
+{"level":"info","msg":"Applying helm chart at /tmp/**-helm-apply-279446173/env as release name ** to namespace **-staging","time":"2019-10-02T18:40:14Z"}
+{"level":"info","msg":"verifying the helm requirements versions in dir: . using version stream URL:  and git ref: \n","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"Ignoring templates/.gitignore","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"Wrote chart values.yaml /tmp/**-helm-apply-279446173/env/values.yaml generated from directory tree","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"generated helm /tmp/**-helm-apply-279446173/env/values.yaml","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"\nPipelineSecrets: {}\ncleanup:\n  Annotations:\n    helm.sh/hook: pre-delete\n    helm.sh/hook-delete-policy: hook-succeeded\n  Args:\n  - --cleanup\ncontrollerbuild:\n  enabled: true\ncontrollerworkflow:\n  enabled: false\ndockerRegistry: 875966900912.dkr.ecr.us-west-2.amazonaws.com\nexpose:\n  Annotations:\n    helm.sh/hook: post-install,post-upgrade\n    helm.sh/hook-delete-policy: hook-succeeded\n  Args:\n  - --v\n  - 4\n  config:\n    domain: **.release.forge.auth0.net\n    exposer: Ingress\n    http: \"true\"\njenkins:\n  Servers:\n    Global:\n      EnvVars:\n        TILLER_NAMESPACE: kube-system\n  enabled: false\nprow: {}\n\n","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"Using values files: /tmp/**-helm-apply-279446173/env/values.yaml","time":"2019-10-02T18:40:15Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-10-02T18:40:15Z"}
+{"level":"info","msg":"Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io","time":"2019-10-02T18:40:17Z"}
+{"level":"info","msg":"Successfully added Helm repository storage.googleapis.com.","time":"2019-10-02T18:40:18Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080","time":"2019-10-02T18:40:18Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.","time":"2019-10-02T18:40:18Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-10-02T18:40:18Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io","time":"2019-10-02T18:40:18Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.","time":"2019-10-02T18:40:19Z"}
+{"level":"info","msg":"Applying Apps chart overrides","time":"2019-10-02T18:40:30Z"}
+{"level":"info","msg":"Applying chart overrides","time":"2019-10-02T18:40:30Z"}
+{"level":"info","msg":"","time":"2019-10-02T18:40:31Z"}
+{"level":"info","msg":"","time":"2019-10-02T18:40:31Z"}
