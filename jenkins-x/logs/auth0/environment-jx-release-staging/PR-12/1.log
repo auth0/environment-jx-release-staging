@@ -1,0 +1,33 @@
+
+Showing logs for build [32mauth0-environment-jx-release-st-qwh2t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-5xm8n[0m
+{"level":"warn","ts":1571405935.9431174,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571405935.944104,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mauth0-environment-jx-release-st-qwh2t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-pvxtd[0m
+{"level":"warn","ts":1571405936.715091,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1571405936.721364,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mauth0-environment-jx-release-st-qwh2t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mauth0-environment-jx-release-st-qwh2t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-auth0-environment-jx-release-st-kw855[0m
+{"level":"warn","ts":1571405965.623579,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1571405965.8455458,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/auth0/environment-**-release-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-qwh2t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:cb0320f0988c73b4ec3c859c574d997aa7369c4f,12:c37e2f2d26f616d504192901e341cf81c7bc4833","time":"2019-10-18T13:39:26Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin c37e2f2d26f616d504192901e341cf81c7bc4833: cb0320f0988c73b4ec3c859c574d997aa7369c4f: in ","time":"2019-10-18T13:39:27Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-10-18T13:39:27Z"}
+{"level":"debug","msg":"ran git reset --hard cb0320f0988c73b4ec3c859c574d997aa7369c4f in ","time":"2019-10-18T13:39:27Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-10-18T13:39:27Z"}
+{"level":"debug","msg":"ran git merge c37e2f2d26f616d504192901e341cf81c7bc4833 in ","time":"2019-10-18T13:39:27Z"}
+{"level":"info","msg":"Merged SHA c37e2f2d26f616d504192901e341cf81c7bc4833 with commit message 'chore: Promote dadjokes to version 0.0.24' into base branch master","time":"2019-10-18T13:39:27Z"}
+
+Showing logs for build [32mauth0-environment-jx-release-st-qwh2t-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-10-18T13:39:27Z"}
+{"level":"info","msg":"Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io","time":"2019-10-18T13:39:29Z"}
+{"level":"info","msg":"Successfully added Helm repository storage.googleapis.com.","time":"2019-10-18T13:39:30Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080","time":"2019-10-18T13:39:30Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.","time":"2019-10-18T13:39:30Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080","time":"2019-10-18T13:39:30Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io","time":"2019-10-18T13:39:31Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.","time":"2019-10-18T13:39:32Z"}
